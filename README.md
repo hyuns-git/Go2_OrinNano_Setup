@@ -11,8 +11,8 @@
 
 > [!NOTE]
 > 이 가이드는 실제 Jetson Orin Nano + Go2 환경에서 **검증된 절차**를 기반으로 작성되었습니다.
->
-> ## ⚠️ 필수 주의 사항: D115 캐리어 보드 및 L4T 커널 보호
+
+ ## ⚠️ 필수 주의 사항: D115 캐리어 보드 및 L4T 커널 보호
 
 본 환경은 NVIDIA Jetson Orin Nano 모듈에 커스텀 보드인 **D115 캐리어 보드**가 결합된 시스템입니다. 하드웨어의 정상적인 작동을 위해 제조사의 맞춤형 BSP(Board Support Package) 및 NVIDIA L4T(Linux for Tegra) 커널이 적용되어 있습니다. 따라서 다음 사항을 엄격히 준수해야 합니다.
 
