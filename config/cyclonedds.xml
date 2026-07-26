@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  CycloneDDS 설정 파일
+  Unitree Go2 로봇과의 DDS 통신을 위한 네트워크 인터페이스 설정
+
+  사용법:
+    export CYCLONEDDS_URI=file://$(pwd)/config/cyclonedds.xml
+-->
+<CycloneDDS xmlns="https://cdds.io/config"
+            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+            xsi:schemaLocation="https://cdds.io/config">
+  <Domain>
+    <General>
+      <Interfaces>
+        <!-- 네트워크 인터페이스 지정 (환경에 맞게 eth0 또는 eth1로 수정) -->
+        <NetworkInterface name="eth1" priority="default" multicast="default"/>
+      </Interfaces>
+      <AllowMulticast>default</AllowMulticast>
+      <MaxMessageSize>65500B</MaxMessageSize>
+    </General>
+    <Discovery>
+      <ParticipantIndex>auto</ParticipantIndex>
+      <MaxAutoParticipantIndex>120</MaxAutoParticipantIndex>
+    </Discovery>
+    <Internal>
+      <SocketReceiveBufferSize min="10MB"/>
+    </Internal>
+  </Domain>
+</CycloneDDS>
